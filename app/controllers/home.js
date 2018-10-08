@@ -57,14 +57,11 @@ exports.login = function (req, res) {
 }
 exports.listar = (req, res) => {
 	//console.log(personas.traerPersona());
-	res.render('personaVista',{
-		data : personas.traerPersona()
-	})
+	personas.traerPersona(req, res)
 
 }
 exports.agregarPersona = (req, res) => {
 	personas.agregarPersona(req,res)
-	res.redirect('/listar')
 }
 
 

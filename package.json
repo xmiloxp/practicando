@@ -38,5 +38,8 @@
     "serve-favicon": "^2.5.0",
     "simple-encryptor": "latest",
     "underscore": "latest"
+  },
+  "scripts": {
+    "start": "npm app.js"
   }
 }

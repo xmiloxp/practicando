@@ -1,15 +1,14 @@
 const mysql = require('mysql')
 const db = require('../../config/database')
-const connection = mysql.createConnection(db.url)
+const connection = mysql.createConnection(db.test)
 
 let datos = null;
 exports.traerPersona = (req, res) =>{
-	
-	connection.query('SELECT * FROM persona',(error, results, fields) =>{
-		datos = results;
-	})
-	//connection.end()
-	return datos;
+	connection.query("SELECT * FROM persona", (error, results, fields) => {
+		res.render("personaVista", {
+		  data: results
+		});
+	  });
 }
 exports.agregarPersona = (req, res) =>{
 	//console.log(req.body)
@@ -19,7 +18,7 @@ exports.agregarPersona = (req, res) =>{
 		nombres,
 		apellidos
 	},(err,result) =>{
-		if(err)
-			res.redirect('/listar')
-	} )
+		res.redirect('/listar')
+	}
+	)
 }

@@ -7,6 +7,28 @@ module.exports = {
         user: 'root',
         password: '',
         database: 'test'
-    }
+    },
+       
+    "development": {
+          "username": "root",
+          "password": "root",
+          "database": "articles",
+          "host": "localhost",
+          "dialect": "mysql"
+        },
+        "test": {
+          "username": "root",
+          "password": "",
+          "database": "test",
+          "host": "localhost"
+          //"dialect": "mysql"
+        },
+        "production": {
+          "username": "root",
+          "password": "root",
+          "database": "articles",
+          "host": "127.0.0.1",
+          "dialect": "mysql"
+        }
     
 };
