@@ -63,6 +63,8 @@ exports.listar = (req, res) => {
 exports.agregarPersona = (req, res) => {
 	personas.agregarPersona(req,res)
 }
-
+exports.borrar = (req, res) => {
+	personas.borrar(req, res) 
+}
 
 

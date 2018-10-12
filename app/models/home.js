@@ -22,3 +22,10 @@ exports.agregarPersona = (req, res) =>{
 	}
 	)
 }
+exports.borrar = (req, res) => {
+	const { dni } = req.params
+	connection.query('DELETE FROM persona WHERE dni = ?',[dni],(err, rows) => {
+		console.log(dni)
+		res.redirect('/listar');
+	})
+}

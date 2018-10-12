@@ -4,7 +4,11 @@ var home = require('../app/controllers/home');
 
 module.exports = function (app, passport) {
     app.get('/listar',home.listar);
-    app.post('/listar',home.agregarPersona)
+    app.post('/agregar',home.agregarPersona)
+    app.get('/borrar/:dni',home.borrar)
+    app.get('/editar/:dni',home.editar)
+    app.post('/editar/:dni',home.update)
+    
     app.get('/saludar',(req, res) => {
         res.render('Hola :V');
     })

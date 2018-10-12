@@ -1,0 +1,23 @@
+<div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card-body">
+                    <h3>Agregar Persona</h3>
+                    <form action="/editar/<%= data.dni%>" method="POST">
+                                    
+                        <div class="form-group">
+                            <input type="text" name="dni" value="<%= data.dni %>" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="nombres" value="<%= data.nombres %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="apellidos" value="<%= data.apellidos %>" class="form-control">
+                        </div>
+                                                                
+                        <button type="submit" class="btn btn-primary">Editar</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
